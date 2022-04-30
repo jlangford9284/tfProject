@@ -1,5 +1,3 @@
-# tfProject
-
 # Introduction
 
 This repository contains the Terraform file required to deploy the webservers running website.com to GCP

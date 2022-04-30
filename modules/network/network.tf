@@ -1,5 +1,5 @@
 resource "google_compute_network" "network" {
-    name                    = "${var.platform}-${var.name}-${var.environment}"
+    name                    = "${var.platform}-${var.regionPrefix}-${var.name}-${var.environment}"
     auto_create_subnetworks = "${var.autoSubnet}"
 }
 

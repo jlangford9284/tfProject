@@ -18,3 +18,6 @@ variable "platform" {
 
 variable "environment" {
 }
+
+variable "regionPrefix" {
+}

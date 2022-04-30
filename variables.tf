@@ -69,3 +69,6 @@ variable "ports" {
 
 variable "sourceRange" {
 }
+
+variable "regionPrefix" {
+}

@@ -1,13 +1,13 @@
 resource "google_compute_disk" "datadrive" {
     count = "${var.diskCount}"
-    name = "${var.platform}-${var.name}-${var.diskName}${count.index}-${var.environment}"
+    name = "${var.platform}-${var.regionPrefix}-${var.name}-${var.diskName}${count.index}-${var.environment}"
     type = "${var.diskType}"
     zone = "${var.zone}"
     size = "${var.diskSize}"
 }
 
 resource "google_compute_instance" "compute" {
-    name = "${var.platform}-${var.name}-${var.environment}"   
+    name = "${var.platform}-${var.regionPrefix}-${var.name}-${var.environment}"   
     machine_type = "${var.machineType}"
     zone         = "${var.zone}"
 

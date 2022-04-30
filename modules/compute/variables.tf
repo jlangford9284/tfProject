@@ -36,3 +36,6 @@ variable "diskSize" {
 
 variable "labels" {
 }
+
+variable "regionPrefix" {
+}

@@ -7,6 +7,7 @@ module "network" {
     subnetName = "${var.subnetName}"
     region = "${var.region}"
     cidr = "${var.cidr}"
+    regionPrefix = "${var.regionPrefix}"
 }
 
 module "compute" {
@@ -16,6 +17,7 @@ module "compute" {
     platform = "${var.platform}"
     environment = "${var.environment}"
     region = "${var.region}"
+    regionPrefix = "${var.regionPrefix}"
     machineType = "${var.machineType}"
     labels = "${var.labels}"
     zone = "${var.zone}"
@@ -37,12 +39,16 @@ module "instanceGroup" {
     zone = "${var.zone}"
     port = "${var.port}"
     portName = "${var.portName}"
+    environment = "${var.environment}"
+    region = "${var.region}"
+    platform = "${var.platform}"
+    regionPrefix = "${var.regionPrefix}"
 }
 
 module "firewallRules" {
     source = "./modules/firewallRules"
     name = "${var.firewallRulesName}"
-    network = "${var.platform}-${var.networkName}-${var.environment}" #needs to become var.networkname
+    network = "${var.platform}-${var.regionPrefix}-${var.networkName}-${var.environment}"
     protocol = "${var.protocol}"
     ports = ["${var.ports}"]
     sourceRange = ["${var.sourceRange}"]
@@ -51,3 +57,4 @@ module "firewallRules" {
         module.compute
     ]
 }
+

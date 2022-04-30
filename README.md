@@ -41,3 +41,9 @@ Once created you can deploy this infrastructure as followed;
 5. Terraform should now output a plan describing the deployment as listed in the introduction section
 6. Type Yes to deploy the infrastructure ensuring you are happy with the plan output
 7. Terraform will now deploy the infrastructure to GCP 
+
+# Adding addtitional drive
+
+To add an additional drive to the deployment there is a variable controlling the count of additional disks attached to the VM
+
+Increment the variable `diskCount` in the `variables.tf` file to increase the number of attached disks

@@ -48,7 +48,7 @@ module "instanceGroup" {
 module "firewallRules" {
     source = "./modules/firewallRules"
     name = "${var.firewallRulesName}"
-    network = "${var.platform}-${var.networkName}-${var.environment}"
+    network = "${var.platform}-${var.regionPrefix}-${var.networkName}-${var.environment}"
     protocol = "${var.protocol}"
     ports = ["${var.ports}"]
     sourceRange = ["${var.sourceRange}"]
@@ -57,3 +57,4 @@ module "firewallRules" {
         module.compute
     ]
 }
+

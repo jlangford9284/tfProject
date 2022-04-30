@@ -8,9 +8,11 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("C:\\Users\\Jordan\\Desktop\\TFProject\\credentials\\tfproject-348519-dc9d37703b87.json")
-
   project = "tfproject-348519"
   region  = "europe-west2"
   zone    = "europe-west2-b"
+}
+
+terraform {
+    backend "gcs" {}
 }

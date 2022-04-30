@@ -12,7 +12,7 @@ Modules have been created to deploy the following infrastructure;
 
 These modules have been created to allow you to deploy this infrastrucutre in addtional regions
 
-To create addtional deployments in other regions you will need to create your own environment `variables.tfvars` file located in the `/tfproject/environment` folder
+To create addtional deployments in other regions you will need to create your own environment `variables.tfvars` & `backend.tf` files located in the `/tfproject/environment/<region>` folder
 This will allow you to create an additional deployment depending on the variables provided
 
 **Please note, this has been written using PowerShell as the terminal to run Terraform**
@@ -21,6 +21,8 @@ This will allow you to create an additional deployment depending on the variable
 
 Use the initial `".\environment\europe-west\variables.tfvars"` as a template to create you own deployment placing this inside a folder for the region you wish to deploy
 e.g: `".\environment\us-west\variables.tfvars"`
+
+Create a storage bucket in GCP and update the `bucket` variable in the `backend.tf` file to store the Terraform state
 
 Once created you can deploy this infrastructure as followed;
 
@@ -31,7 +33,7 @@ Once created you can deploy this infrastructure as followed;
 
 3. You can now initialize terraform in the project folder selecting your `.tfvars` file
 
-    `terraform init -var-file=".\environment\europe-west\variables.tfvars"`
+    `terraform init -var-file=".\environment\europe-west\variables.tfvars" -backend-config=".\environment\europe-west\backend.tf"`
 
 4. Ensure you have no errors. You can now run the apply
 

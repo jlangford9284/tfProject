@@ -1,7 +1,6 @@
 #Platform 
-region = "europe-west2"
-zone = "europe-west2-a"
-regionPrefix = "ew"
+region = "us-west2"
+zone = "us-west2-a"
 platform = "jl"
 environment = "p"
 

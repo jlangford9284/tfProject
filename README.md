@@ -37,8 +37,8 @@ Once created you can deploy this infrastructure as followed;
 
 4. Ensure you have no errors. You can now run the apply
 
-    `terraform init -var-file=".\environment\europe-west\variables.tfvars"`
-    
+    `terraform apply -var-file=".\environment\europe-west\variables.tfvars"`
+
 5. Terraform should now output a plan describing the deployment as listed in the introduction section
 6. Type Yes to deploy the infrastructure ensuring you are happy with the plan output
 7. Terraform will now deploy the infrastructure to GCP 

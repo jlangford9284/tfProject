@@ -4,7 +4,7 @@ This repository contains the Terraform file required to deploy the webservers ru
 
 Modules have been created to deploy the following infrastructure;
 
- - VPC 
+ - VPC Network
  - Subnet 
  - 2 Windows Compute Instances 
  - 1 Instance Groups for the Virtual Machines

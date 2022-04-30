@@ -12,8 +12,7 @@ Modules have been created to deploy the following infrastructure;
 
 These modules have been created to allow you to deploy this infrastrucutre in addtional regions
 
-To create addtional deployments in other regions you will need to create your own environment `variables.tfvars` & `backend.tf` files located in the `/tfproject/environment/<region>` folder
-This will allow you to create an additional deployment depending on the variables provided
+To create addtional deployments in other regions you will need to create your own environment `variables.tfvars` & `backend.tf` files located in the `/tfproject/environment/<region>` folder. This will allow you to create an additional deployment depending on the variables provided
 
 **Please note, this has been written using PowerShell as the terminal to run Terraform**
 
